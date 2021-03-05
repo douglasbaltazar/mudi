@@ -3,6 +3,7 @@ package br.com.alura.mvc.dto;
 import javax.validation.constraints.NotBlank;
 
 import br.com.alura.mvc.model.Pedido;
+import br.com.alura.mvc.model.StatusPedido;
 
 public class RequisicaoNovoPedido {
 	@NotBlank
@@ -42,6 +43,7 @@ public class RequisicaoNovoPedido {
 		p.setUrlProduto(urlProduto);
 		p.setUrlImagem(urlImagem);
 		p.setDescricao(descricao);
+		p.setStatus(StatusPedido.AGUARDANDO);
 		return p;
 	}
 }
